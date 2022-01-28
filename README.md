@@ -6,6 +6,7 @@
  
  Использование:
     Загружаем ini-файл: Handle_ini cfile("C:\\test\\test.ini");
+    
         В случае успеха будет cfile.IsLoaded=true;
     Указываем имя текущей секции: cfile.SetSection("[section]")
         имя текущей секции будет в cfile.CurrentSection
