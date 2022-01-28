@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1637849663 source:d:\cpp\handle_ini\develop\handle_ini.cpp
+	"handle_ini.h"
+
+1637849792 d:\cpp\handle_ini\develop\handle_ini.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+
