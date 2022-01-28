@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include "handle_ini.h"
+
 using namespace std;
 
 int main()
 {
-    string iniFile="d:\\CPP\\Handle_ini\\test.ini";
+    string iniFile="a:\\Git\\Handle_ini\\Handle_ini\\test.ini";
     Handle_ini cfg(iniFile);
     if(!cfg.IsLoaded) { cout << "Can't find file " << iniFile << endl; return -1; };
     cfg.SetSection("General");
@@ -13,6 +14,7 @@ int main()
     int Count = cfg.GetIntValue("RunCount");
     Count++;
     cfg.SetIntValue("RunCount", Count);
+    cout << "PI=" << cfg.GetFloatValue("PI") << endl;
     cfg.WriteFile(iniFile) ;
     return 0;
 }

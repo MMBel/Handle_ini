@@ -8,3 +8,17 @@
 	<iostream>
 	<fstream>
 
+1637849663 source:a:\git\handle_ini\handle_ini\develop\handle_ini.cpp
+	"handle_ini.h"
+
+1637849792 a:\git\handle_ini\handle_ini\develop\handle_ini.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+
+1638909506 source:a:\git\handle_ini\handle_ini\develop\main.cpp
+	<iostream>
+	<string>
+	"handle_ini.h"
+
