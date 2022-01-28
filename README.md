@@ -1,32 +1,28 @@
 # Handle_ini
  C++ класс для работы с ini-файлами
+ ### Использование:
+ Подключаем заголовочный фал и смотрим описание в нем.
  
- Использование:
+ ```#include "Handle_ini.h"```
  
- #include "Handle_ini.h" подключаем заголовочный фал и смотрим описание в нем.
+ Загружаем ini-файл:
  
- Загружаем ini-файл: Handle_ini cfile("C:\\test\\test.ini");
+ ```Handle_ini cfile("C:\\test\\test.ini");```
  
- В случае успеха будет cfile.IsLoaded=true;
+ В случае успеха будет ```cfile.IsLoaded=true;```
  
- Указываем имя текущей секции: cfile.SetSection("section");
+ Указываем имя текущей секции: ```cfile.SetSection("section");```
  
-  имя текущей секции будет в cfile.CurrentSection
+  имя текущей секции всегда находится в ```cfile.CurrentSection```
   
   Если имя ключа не существует:
-  
-   GetBoolValue("wrongkey") = false;
+  > - GetBoolValue("wrongkey") = false;
+  > - GetStringValue("wrongkey")="";
+  > - GetIntValue("wrongkey")=0;
+  > - GetFloatValue("wrongkey")=0;
    
-   GetStringValue("wrongkey")="";
-   
-   GetIntValue("wrongkey")=0;
-   
-   GetFloatValue("wrongkey")=0;
-   
-  По-умолчанию геттеры и сеттеры действуют в секции "" (без [имени])
-  
+  По-умолчанию геттеры и сеттеры действуют в секции "" (без [имени])<br>
   она автоматически устанавливается при:
-  
    - действии конструктора,
    - загрузке файла,
    - удалении текущей секции
@@ -36,4 +32,4 @@
   
   новые комментарии добавляются в конец секции,
   
-  Выгрузка файла: cfile.WriteFile(string NewFullpath) файл будет перезаписан!
+  Запись файла на диск: ```cfile.WriteFile(string NewFullpath)``` файл будет перезаписан!
